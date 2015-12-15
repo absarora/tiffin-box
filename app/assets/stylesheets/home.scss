@@ -70,12 +70,12 @@ header{
 	}
 	
 	.transbox{
+		position: relative;
 		margin-top: -40px;
 		padding: 3px 0;
 		background-color: #eee;
 	    opacity: 0.5;
 	    filter: alpha(opacity=50);
-	    width: inherit;
 
 	    .item-name{
 	    	text-align: center;
@@ -126,6 +126,14 @@ footer, .push{
 
 /* --------------- Media Queries --------------- */
 
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+	.content{
+		.img-wrap{
+			width: 65%;
+			margin: 15px auto;
+		}
+	}
+}
 @media only screen and (max-width: 767px) {
 	.content{
 		.hero-unit{
