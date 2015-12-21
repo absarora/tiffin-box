@@ -53,16 +53,12 @@ header{
 
 .content{
 	.hero-unit{
-		h2{
-			margin-top: 0;
-		}
 		margin: 10px 10px 0;
 		padding: 10px 0;
-		.promo-terms{
-			font-size: 28px;
-			span{
-				background: #fcefa7;
-			}
+		
+		h2{
+			margin-top: 0;
+			text-align: center;
 		}
 	}
 	.row{
