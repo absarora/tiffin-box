@@ -1,0 +1,94 @@
+<header>
+	<h1 class="company-name">Tiffin Box</h1>
+	<h3 class="index-heading">Survey</h3>
+</header>
+<div class='container'>
+    <%= simple_form_for @survey, :html => {:class => 'form-horizontal', id: 'tiffin-box-survey' } do |f| %>
+    <div class='row survey-content'>
+      <div class='col-sm-12'>
+        <div class='column col-sm-6 col-lg-6 col-xs-12'>
+          <div class="form-group">
+          	<%= f.label :name %>
+            <%= f.input_field :name, autofocus: true, class: 'form-control', placeholder: '(Optional)' %>
+          </div>
+        </div>
+        <div class='column col-sm-6 col-lg-6 col-xs-12'>
+          <div class="form-group">
+          	<%= f.label :gender %>
+            <%= f.input_field :gender, collection: ['male', 'female'], selected: 'female', :required => true, class: 'form-control' %>
+          </div>
+        </div>
+        <div class='column col-sm-6 col-lg-6 col-xs-12'>
+          <div class="form-group">
+          	<%= f.label :age %>
+            <%= f.input_field :age, collection: ['< 20', '20 - 24', '25 - 30', '31 - 40', '41 - 50', '> 50'], selected: '20 - 24', :required => true, class: 'form-control', placeholder: 'Age' %>
+          </div>
+        </div>
+        <div class='column col-sm-6 col-lg-6 col-xs-12'>
+          <div class="form-group">
+          	<%= f.label :type_of_diet %>
+            <%= f.input_field :diet, collection: ['Vegetarian', 'Non-Vegetarian'], selected: 'Vegetarian', :required => true, class: 'form-control', placeholder: 'Diet' %>
+          </div>
+        </div>
+        <div class='column col-sm-6 col-lg-6 col-xs-12'>
+          <div class="form-group">
+          	<%= f.label :favorite_cuisine %>
+            <%= f.input_field :cuisine, :required => true, class: 'form-control', placeholder: 'Example: Indian, American, Chinese, Thai, ...' %>
+          </div>
+        </div>
+        <div class='column col-sm-6 col-lg-6 col-xs-12'>
+          <div class="form-group">
+          	<%= f.label :preferred_lunch_time %>
+            <%= f.input_field :lunch_time, collection: ['12:00pm - 1:00pm', '1:00pm - 2:00pm', '2:00pm - 3:00pm', '3:00pm - 4:00pm'], selected: '12:00pm - 1:00pm', :required => true, class: 'form-control', placeholder: 'Lunch Time' %>
+          </div>
+        </div>
+        <div class='column col-sm-6 col-lg-6 col-xs-12'>
+          <div class="form-group">
+          	<%= f.label :what_do_you_usually_have_for_lunch? %>
+            <%= f.input_field :lunch_meal, :required => true, class: 'form-control', placeholder: 'Example: Chicken and Rice...' %>
+          </div>
+        </div>
+        <div class='column col-sm-6 col-lg-6 col-xs-12'>
+          <div class="form-group">
+          	<%= f.label :preferred_dinner_time %>
+            <%= f.input_field :dinner_time, collection: ['6:00pm - 7:00pm','7:00pm - 8:00pm','8:00pm - 9:00pm','9:00pm - 10:00pm','10:00pm - 11:00pm'], selected: '8:00pm - 9:00pm', :required => true, class: 'form-control', placeholder: 'Dinner Time' %>
+          </div>
+        </div>
+        <div class='column col-sm-6 col-lg-6 col-xs-12'>
+          <div class="form-group">
+          	<%= f.label :preferred_method_to_order_food %>
+            <%= f.input_field :order_method, collection: ['call', 'web app', 'mobile app'], selected: 'web app', :required => true, class: 'form-control', placeholder: 'Order Method' %>
+          </div>
+        </div>
+        <div class='column col-sm-6 col-lg-6 col-xs-12'>
+          <div class="form-group">
+          	<%= f.label :what_device_do_you_own? %>
+            <%= f.input_field :device, collection: ['iOS', 'Android', 'Other'], selected: 'iOS', :required => true, class: 'form-control', placeholder: 'Device' %>
+          </div>
+        </div>
+        <div class='column col-sm-6 col-lg-6 col-xs-12'>
+          <div class="form-group">
+          	<%= f.label :average_money_spent_per_meal_per_day %>
+            <%= f.input_field :cost, collection: ['Less than $5.00', 'Less than $10.00','Less than $15.00','More than $15.00'], selected: 'Less than $10.00', :required => true, class: 'form-control', placeholder: 'Cost' %>
+          </div>
+        </div>
+        <div class='column col-sm-6 col-lg-6 col-xs-12'>
+          <div class="form-group">
+          	<%= f.label :average_time_spent_on_cooking_per_week %>
+            <%= f.input_field :cook_time, collection: ['0 - 5 hrs', '6 - 10 hrs', '11 - 20 hrs', 'more than 20 hrs'], selected: '6 - 10 hrs', :required => true, class: 'form-control', placeholder: 'Cook Time' %>
+          </div>
+        </div>
+        <div class='column col-sm-6 col-lg-6 col-xs-12'>
+          <div class="form-group">
+          	<%= f.label :expected_delivery_time %>
+            <%= f.input_field :delivery_time, collection: ['Less than 15 min', 'Less than 30 min', 'Less than 45 min', 'Less than 60 min'], selected: 'Less than 45 min', :required => true, class: 'form-control', placeholder: 'Delivery Time' %>
+          </div>
+        </div>
+        <div class='column col-sm-6 col-lg-6 col-xs-12'>
+          <div class="form-group survey-button">
+            <%= f.button :submit, 'Submit' %>
+          </div>
+        </div>
+    </div>
+    <% end %>
+</div>

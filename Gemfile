@@ -30,6 +30,7 @@ group :production do
 	gem 'rails_12factor'
 end
 
+gem 'simple_form'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

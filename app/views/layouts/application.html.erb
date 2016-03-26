@@ -8,8 +8,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="wrapper">
+		<%= yield %>
+	</div>
 
-<%= yield %>
-
+	<footer>
+		<p>Developed by: <a href="mailto:absingharora@gmail.com">Ajay Singh</a></p>
+	</footer>
 </body>
 </html>
