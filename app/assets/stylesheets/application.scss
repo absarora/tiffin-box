@@ -3,3 +3,11 @@
 @import "home.scss";
 @import "surveys.scss";
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Slab|Oleo+Script);
+
+.invalid input:required:invalid {
+    border-color: #FF0000;
+}
+
+.invalid input:required:valid {
+    border-color: #FF0000;
+}

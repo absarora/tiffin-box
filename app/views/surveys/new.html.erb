@@ -3,7 +3,7 @@
 	<h3 class="index-heading">Survey</h3>
 </header>
 <div class='container'>
-    <%= simple_form_for @survey, :html => {:class => 'form-horizontal', id: 'tiffin-box-survey' } do |f| %>
+    <%= simple_form_for @survey, :html => {:class => 'form-horizontal validate-form' } do |f| %>
     <div class='row survey-content'>
       <div class='col-sm-12'>
         <div class='column col-sm-6 col-lg-6 col-xs-12'>
@@ -92,3 +92,22 @@
     </div>
     <% end %>
 </div>
+<script type="text/javascript">
+  function hasHtml5Validation () {
+    return typeof document.createElement('input').checkValidity === 'function';
+  }
+
+  if (hasHtml5Validation()) {
+    $('.validate-form').submit(function (e) {
+      console.log('validating form');
+      if (!this.checkValidity()) {
+        e.preventDefault();
+        $(this).addClass('invalid');
+        $('#status').html('invalid');
+      } else {
+        $(this).removeClass('invalid');
+        $('#status').html('submitted');
+      }
+    });
+  }
+</script>
