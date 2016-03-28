@@ -10,7 +10,7 @@
 .survey-content{
 	border: 1px solid #000;
 	padding: 15px 0 15px 15px;
-    margin: 30px;
+  margin: 30px;
 }
 
 .survey-button{
@@ -38,8 +38,8 @@
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
-  	.content{
-  		margin: 30px 5px;
+  	.survey-content{
+  		margin: 15px 5px;
     	padding-left: 5px;
   	}
   	header{
